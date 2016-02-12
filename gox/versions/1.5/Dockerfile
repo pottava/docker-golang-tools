@@ -1,6 +1,6 @@
 # Gox (go v1.5)
 #
-# docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/gox --osarch "linux/amd64" -output "dist/{{.OS}}_{{.Arch}}"
+# docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/gox:1.5 --osarch "linux/amd64" -output "dist/{{.OS}}_{{.Arch}}"
 
 FROM golang:1.5-alpine
 
