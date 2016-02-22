@@ -1,4 +1,4 @@
-# Godep (go v1.5)
+# Godep v54 (go v1.5)
 #
 # docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/godep:1.5 save ./...
 # docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/godep:1.5 restore
