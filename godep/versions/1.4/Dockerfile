@@ -5,7 +5,8 @@
 
 FROM pottava/golang:1.4
 
-RUN go get github.com/tools/godep \
-      && rm -rf /go/pkg /go/src
+ENV GODEP_VERSION=63
 
-ENTRYPOINT ["godep"]
+ADD https://github.com/tools/godep/releases/download/v${GODEP_VERSION}/godep_linux_amd64 /go/bin/
+RUN chmod +x /go/bin/godep_linux_amd64
+ENTRYPOINT ["/go/bin/godep_linux_amd64"]
