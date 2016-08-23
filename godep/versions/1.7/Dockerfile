@@ -7,6 +7,11 @@ FROM pottava/golang:1.7
 
 ENV GODEP_VERSION=74
 
-ADD https://github.com/tools/godep/releases/download/v${GODEP_VERSION}/godep_linux_amd64 /go/bin/
-RUN chmod +x /go/bin/godep_linux_amd64
-ENTRYPOINT ["/go/bin/godep_linux_amd64"]
+RUN mkdir -p $GOPATH/src/github.com/tools/ \
+    && cd $GOPATH/src/github.com/tools/ \
+    && git clone --depth=1 -b v${GODEP_VERSION} https://github.com/tools/godep.git \
+    && cd godep \
+    && go install \
+    && rm -rf /go/src /go/pkg
+
+ENTRYPOINT ["godep"]
