@@ -5,7 +5,7 @@
 
 FROM pottava/golang:1.7
 
-ENV GODEP_VERSION=74
+ENV GODEP_VERSION=75
 
 RUN mkdir -p $GOPATH/src/github.com/tools/ \
     && cd $GOPATH/src/github.com/tools/ \
