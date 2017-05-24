@@ -15,9 +15,10 @@ RUN apk --no-cache add --virtual build-dependencies git \
     && git clone --depth=1 -b v${GODEP_VERSION} https://github.com/tools/godep.git $REPOSITORY \
     && cd $REPOSITORY \
     && go install \
+    && mv /go/bin/godep /usr/bin \
 
     # Clean up
     && apk del --purge -r build-dependencies \
-    && rm -rf /go/src /go/pkg /var/cache/* /var/lib/apk*
+    && rm -rf /go /var/cache/*
 
 ENTRYPOINT ["godep"]
