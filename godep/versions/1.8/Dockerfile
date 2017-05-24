@@ -8,17 +8,13 @@ FROM pottava/golang:1.8-builder
 
 ENV GODEP_VERSION=79
 
-RUN apk --no-cache add --virtual build-dependencies git \
+RUN apk --no-cache add git
 
-    # Compile tools/godep
-    && REPOSITORY=$GOPATH/src/github.com/tools/godep \
+RUN REPOSITORY=$GOPATH/src/github.com/tools/godep \
     && git clone --depth=1 -b v${GODEP_VERSION} https://github.com/tools/godep.git $REPOSITORY \
     && cd $REPOSITORY \
     && go install \
     && mv /go/bin/godep /usr/bin \
-
-    # Clean up
-    && apk del --purge -r build-dependencies \
     && rm -rf /go /var/cache/*
 
 ENTRYPOINT ["godep"]
