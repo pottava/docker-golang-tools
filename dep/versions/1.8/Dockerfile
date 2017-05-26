@@ -2,10 +2,10 @@
 #
 # docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/dep:go1.8 ensure
 
-FROM alpine:3.5
+FROM alpine:3.6
 
-# Commit at Apr 17, 2017, 19:21 PM UTC
-ENV GODEP_VERSION=477398819a549a19de3927435f70c43bb600e27c \
+# Commit at May 24, 2017, 03:52 PM UTC
+ENV GODEP_VERSION=fe4b78c63ac0340ea680eb75ace7936e106211e3 \
     GOPATH=/go
 
 WORKDIR /go/src
@@ -14,9 +14,9 @@ RUN apk --no-cache add git
 RUN apk --no-cache add --virtual build-dependencies bash gcc musl-dev openssl go \
 
     # Install go 1.8
-    && GOLANG_VERSION=1.8.1 \
+    && GOLANG_VERSION=1.8.3 \
     && GOLANG_SRC_URL=https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz \
-    && GOLANG_SRC_SHA256=33daf4c03f86120fdfdc66bddf6bfff4661c7ca11c5da473e537f4d69b470e57 \
+    && GOLANG_SRC_SHA256=5f5dea2447e7dcfdc50fa6b94c512e58bfba5673c039259fd843f68829d99fa6 \
     && export GOROOT_BOOTSTRAP="$(go env GOROOT)" \
     && wget -q "$GOLANG_SRC_URL" -O golang.tar.gz \
     && echo "$GOLANG_SRC_SHA256  golang.tar.gz" | sha256sum -c - \
