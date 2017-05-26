@@ -1,5 +1,6 @@
 Supported tags and respective `Dockerfile` links:  
-・latest ([realize/versions/1.2/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/realize/versions/1.2/Dockerfile))  
+・latest ([realize/versions/1.3/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/realize/versions/1.3/Dockerfile))  
+・1.3 ([realize/versions/1.3/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/realize/versions/1.3/Dockerfile))  
 ・1.2 ([realize/versions/1.2/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/realize/versions/1.2/Dockerfile))  
 
 # Usage
