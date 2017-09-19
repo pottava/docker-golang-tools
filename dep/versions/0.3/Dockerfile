@@ -5,7 +5,7 @@
 
 FROM alpine:3.6
 
-ENV GODEP_VERSION=v0.3.0 \
+ENV GODEP_VERSION=v0.3.1 \
     GOPATH=/go
 
 WORKDIR /go/src
