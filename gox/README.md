@@ -1,5 +1,8 @@
 Supported tags and respective `Dockerfile` links:  
-・latest ([gox/versions/1.8/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/gox/versions/1.8/Dockerfile))  
+
+・latest ([gox/versions/1.10/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/gox/versions/1.10/Dockerfile))  
+・go1.10 ([gox/versions/1.10/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/gox/versions/1.10/Dockerfile))  
+・go1.9 ([gox/versions/1.8/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/gox/versions/1.9/Dockerfile))  
 ・go1.8 ([gox/versions/1.8/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/gox/versions/1.8/Dockerfile))  
 ・go1.7 ([gox/versions/1.7/Dockerfile](https://github.com/pottava/docker-golang-tools/blob/master/gox/versions/1.7/Dockerfile))  
 

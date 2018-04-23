@@ -1,8 +1,8 @@
-# Gox (go v1.9)
+# Gox (go v1.10)
 #
-# docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/gox:go1.9 --osarch "linux/amd64" -output "dist/{{.OS}}_{{.Arch}}"
+# docker run --rm -v $GOPATH/src:/go/src -w /go/src/github.com/your-account/project pottava/gox:go1.10 --osarch "linux/amd64" -output "dist/{{.OS}}_{{.Arch}}"
 
-FROM pottava/golang:1.9-builder
+FROM pottava/golang:1.10-builder
 
 RUN apk --no-cache add --virtual build-dependencies git \
 
